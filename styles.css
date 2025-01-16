@@ -1,89 +1,52 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Nunito Sans', 'Roboto', sans-serif;
-  }
-  
-body {
-   height: 100vh;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Nunito Sans', 'Roboto', sans-serif;
 }
+
 .container-title {
-  text-align: center; /* Centra el contenido horizontalmente */
-  margin-top: 20px; /* Agrega un margen superior */
+  text-align: center;
+  /* Centra el contenido horizontalmente */
+  margin: 30px 0;
+}
+
+h2 {
+  text-transform: capitalize;
 }
 
 .title {
-  font-size: 2.5rem; /* Tamaño de la fuente */
-  font-weight: bold; /* Negrita */
-  color: #4CAF50; /* Color del texto (verde) */
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Sombra del texto */
-  font-family: 'Arial', sans-serif; /* Familia de fuentes */
-  margin: 0; /* Elimina el margen del h1 */
+  font-size: 2.5rem;
+  /* Tamaño de la fuente */
+  font-weight: bold;
+  /* Negrita */
+  color: #4CAF50;
+  /* Color del texto (verde) */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  /* Sombra del texto */
+  /* Familia de fuentes */
+  margin: 0;
+  /* Elimina el margen del h1 */
 }
 
-
-.container-carousel{
-  position: relative;
+.container-link{
   display: flex;
-  flex-direction: row;
-  justify-content: center;
+  flex-wrap: wrap; /* Permite que los elementos pasen a la siguiente fila */
+  justify-content:center; /* Ajusta la separación horizontalmente */
 }
 
-
-.carousel {
-  width: 1200px;
-  display: flex;
-  align-items: center;
-  position: relative;
-  overflow: hidden;
-}
-
-.carousel-track {
-  display: flex;
-  gap: 10px;
-  transition: transform 0.5s ease-in-out;
-}
-
-.carousel-slide {
-  min-width: 400px;
-}
-
-
-.carousel-buttons {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%); /* Centra verticalmente los botones */
-  width: 100%;
-  display: flex;
-  justify-content: space-between; /* Distribuye los botones a los extremos */
-}
-
-.carousel-button {
-  background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
-  color: white;
-  border: none;
-  padding: 10px;
-  cursor: pointer;
-  font-size: 16px;
-}
-
-.carousel-button-left {
-  position: absolute;
-  left: 10px; /* Ubica el botón a la izquierda */
-}
-
-.carousel-button-right {
-  position: absolute;
-  right: 10px; /* Ubica el botón a la derecha */
+@media screen and (max-width: 768px) {
+  .container-link {
+    align-items: center;
+    flex-direction: column;
+  }
 }
 
 
 
 
 
-
-.card{
+.card {
   user-select: none;
   width: 400px;
   display: block;
@@ -91,29 +54,29 @@ body {
   background-color: white;
   padding: 18px;
   border-radius: 12px;
-  box-shadow: 0 10px 10px rgb(0, 0, 0,0.05);
+  box-shadow: 0 10px 10px rgb(0, 0, 0, 0.05);
   border: 2px solid transparent;
   transition: 0.2s ease;
 }
 
 
-.card:hover{
+.card:hover {
   border-color: #5372f0;
 }
 
-.card:hover .card-button{
+.card:hover .card-button {
   background-color: #5372f0;
   fill: white;
 }
 
-.card-image{
+.card-image {
   width: 100%;
   aspect-ratio: 16/9;
   object-fit: cover;
   border-radius: 12px;
 }
 
-.card-badge{
+.card-badge {
   color: #5372f0;
   padding: 8px 16px;
   font-size: .95rem;
@@ -124,13 +87,13 @@ body {
   border-radius: 50px;
 }
 
-.card-title{
+.card-title {
   font-size: 1.19rem;
   color: black;
   font-weight: 600;
 }
 
-.card-button{
+.card-button {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -140,32 +103,37 @@ body {
   margin: 30px 0 5px;
   background: none;
   cursor: pointer;
-  border:  2px solid #5372f0;
+  border: 2px solid #5372f0;
   fill: #5372f0;
   transform: rotate(-45deg);
 }
 
-.card-button svg{
+.card-button svg {
   transition: 0.4s ease;
   fill: inherit;
 }
 
 
-.card-badge.classroom{
+.card-badge.classroom {
   color: #205C20;
   background: #D6F8D6;
 }
-.card-badge.kahoot{
+
+.card-badge.kahoot {
   color: #B22485;
   background: #F7DFF5;
 }
+
 .card-badge.youtube {
-  color: #FF0000; /* Rojo característico de YouTube */
-  background: #FFE8E8; /* Un fondo más claro para contrastar */
+  color: #FF0000;
+  /* Rojo característico de YouTube */
+  background: #FFE8E8;
+  /* Un fondo más claro para contrastar */
 }
 
 .card-badge.meetGoogle {
-  color: #0F9D58; /* Verde característico de Google Meet */
-  background: #E6F4EA; /* Un verde claro suave para el fondo */
+  color: #0F9D58;
+  /* Verde característico de Google Meet */
+  background: #E6F4EA;
+  /* Un verde claro suave para el fondo */
 }
-
