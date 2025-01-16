@@ -1,51 +1,49 @@
+:root {
+  --primary-color: #5372f0;
+  --secondary-color: #4CAF50;
+  --text-shadow-color: rgba(0, 0, 0, 0.3);
+  --card-shadow: 0 10px 10px rgba(0, 0, 0, 0.05);
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Nunito Sans', 'Roboto', sans-serif;
 }
-
+/* Containers */
 .container-title {
   text-align: center;
-  /* Centra el contenido horizontalmente */
   margin: 30px 0;
 }
 
+.container-link {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Titles */
 h2 {
   text-transform: capitalize;
 }
 
 .title {
   font-size: 2.5rem;
-  /* Tamaño de la fuente */
   font-weight: bold;
-  /* Negrita */
-  color: #4CAF50;
-  /* Color del texto (verde) */
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-  /* Sombra del texto */
-  /* Familia de fuentes */
+  color: var(--secondary-color);
+  text-shadow: 2px 2px 5px var(--text-shadow-color);
   margin: 0;
-  /* Elimina el margen del h1 */
 }
 
-.container-link{
-  display: flex;
-  flex-wrap: wrap; /* Permite que los elementos pasen a la siguiente fila */
-  justify-content:center; /* Ajusta la separación horizontalmente */
-}
-
-@media screen and (max-width: 768px) {
-  .container-link {
-    align-items: center;
-    flex-direction: column;
-  }
+.card-title {
+  font-size: 1.19rem;
+  color: black;
+  font-weight: 600;
 }
 
 
-
-
-
+/* Card Component */
 .card {
   user-select: none;
   width: 400px;
@@ -54,32 +52,34 @@ h2 {
   background-color: white;
   padding: 18px;
   border-radius: 12px;
-  box-shadow: 0 10px 10px rgb(0, 0, 0, 0.05);
+  box-shadow: var(--card-shadow);
   border: 2px solid transparent;
-  transition: 0.2s ease;
+  transition: border-color 0.2s ease;
 }
 
 
 .card:hover {
-  border-color: #5372f0;
+  border-color: var(--primary-color);
 }
 
+
 .card:hover .card-button {
-  background-color: #5372f0;
+  background-color: var(--primary-color);
   fill: white;
 }
 
+
 .card-image {
   width: 100%;
-  aspect-ratio: 16/9;
+  aspect-ratio: 16 / 9;
   object-fit: cover;
   border-radius: 12px;
 }
 
 .card-badge {
-  color: #5372f0;
+  color: var(--primary-color);
   padding: 8px 16px;
-  font-size: .95rem;
+  font-size: 0.95rem;
   font-weight: 500;
   margin: 16px 0 18px;
   background-color: #DDE4FF;
@@ -87,11 +87,6 @@ h2 {
   border-radius: 50px;
 }
 
-.card-title {
-  font-size: 1.19rem;
-  color: black;
-  font-weight: 600;
-}
 
 .card-button {
   display: flex;
@@ -103,12 +98,14 @@ h2 {
   margin: 30px 0 5px;
   background: none;
   cursor: pointer;
-  border: 2px solid #5372f0;
-  fill: #5372f0;
+  border: 2px solid var(--primary-color);
+  fill: var(--primary-color);
   transform: rotate(-45deg);
+  transition: transform 0.4s ease, background-color 0.4s ease;
 }
 
-.card-button svg {
+
+svg {
   transition: 0.4s ease;
   fill: inherit;
 }
@@ -136,4 +133,15 @@ h2 {
   /* Verde característico de Google Meet */
   background: #E6F4EA;
   /* Un verde claro suave para el fondo */
+}
+
+@media screen and (max-width: 768px) {
+  .container-link {
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .card{
+    width: 300px;
+  }
 }
