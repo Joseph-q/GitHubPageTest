@@ -8,23 +8,18 @@
 body {
    height: 100vh;
 }
-.cotainer-title{
-  display: flex;
-  justify-content: center;
+.container-title {
+  text-align: center; /* Centra el contenido horizontalmente */
+  margin-top: 20px; /* Agrega un margen superior */
 }
+
 .title {
-  font-family: 'Nunito Sans', sans-serif; /* Usa la fuente importada */
-  font-size: 3rem; /* Tamaño del texto */
-  font-weight: 700; /* Negrita */
-  color: #4CAF50; /* Un color verde suave */
-  text-align: center; /* Centra horizontalmente */
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Sombra del texto */
-  margin: 20px 0; /* Margen arriba y abajo */
-  padding: 10px; /* Espaciado interno */
-  border: 2px solid #4CAF50; /* Borde verde */
-  border-radius: 10px; /* Bordes redondeados */
-  background-color: #f0f8ff; /* Fondo azul claro */
-  display: inline-block; /* Centrar con tamaño de contenido */
+  font-size: 2.5rem; /* Tamaño de la fuente */
+  font-weight: bold; /* Negrita */
+  color: #4CAF50; /* Color del texto (verde) */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Sombra del texto */
+  font-family: 'Arial', sans-serif; /* Familia de fuentes */
+  margin: 0; /* Elimina el margen del h1 */
 }
 
 
