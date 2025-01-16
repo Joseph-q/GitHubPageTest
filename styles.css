@@ -8,9 +8,28 @@
 body {
    height: 100vh;
 }
+.cotainer-title{
+  display: flex;
+  justify-content: center;
+}
+.title {
+  font-family: 'Nunito Sans', sans-serif; /* Usa la fuente importada */
+  font-size: 3rem; /* Tamaño del texto */
+  font-weight: 700; /* Negrita */
+  color: #4CAF50; /* Un color verde suave */
+  text-align: center; /* Centra horizontalmente */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Sombra del texto */
+  margin: 20px 0; /* Margen arriba y abajo */
+  padding: 10px; /* Espaciado interno */
+  border: 2px solid #4CAF50; /* Borde verde */
+  border-radius: 10px; /* Bordes redondeados */
+  background-color: #f0f8ff; /* Fondo azul claro */
+  display: inline-block; /* Centrar con tamaño de contenido */
+}
+
 
 .container-carousel{
-  height: 100%;
+  position: relative;
   display: flex;
   flex-direction: row;
   justify-content: center;
