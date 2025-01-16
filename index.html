@@ -7,14 +7,18 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
     <header>
         <h1>Site Title</h1>
     </header>
+    
+    <main class="main-content">
 
-    <main>
         <section class="carousel">
             <button class="carousel-btn prev">&#8249;</button>
             <div class="carousel-content">
+                <div class="carousel-item">Imagen</div>
+                <div class="carousel-item">Imagen</div>
                 <div class="carousel-item">Imagen</div>
             </div>
             <button class="carousel-btn next">&#8250;</button>
@@ -34,5 +38,30 @@
     <footer>
         <p>Pie de página</p>
     </footer>
+
+    <script>
+        const prevButton = document.querySelector('.carousel-btn.prev');
+        const nextButton = document.querySelector('.carousel-btn.next');
+        const carouselContent = document.querySelector('.carousel-content');
+        const items = document.querySelectorAll('.carousel-item');
+        const totalItems = items.length;
+
+        let currentIndex = 0;
+
+        function updateCarousel() {
+            const offset = -currentIndex * 100;
+            carouselContent.style.transform = `translateX(${offset}%)`;
+        }
+
+        prevButton.addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + totalItems) % totalItems;
+            updateCarousel();
+        });
+
+        nextButton.addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % totalItems;
+            updateCarousel();
+        });
+    </script>
 </body>
 </html>
